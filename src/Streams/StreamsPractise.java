@@ -2,6 +2,7 @@ package Streams;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,6 +14,8 @@ public class StreamsPractise {
         List<String> wordsWithoutNull = words.stream()
                 .filter(str -> str != null)
                 .collect(Collectors.toList());
+        int[] intArray = {1,2,3,4,5,6};
+        System.out.println(Arrays.stream(intArray).filter(n->n%2==0).count());
 
         System.out.println("Original List: " + words);
         System.out.println("Filtered List (no nulls): " + wordsWithoutNull);
